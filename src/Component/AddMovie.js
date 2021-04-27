@@ -5,7 +5,7 @@ import './Add.css'
 Modal.setAppElement('#root');
 
 
-const AddMovie = ({ addNewMovie }) => {
+const AddMovie = ({ addNewMovie ,movieList}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [name, setName] = useState('');
     const [date, setDate] = useState('');
@@ -24,6 +24,7 @@ const AddMovie = ({ addNewMovie }) => {
   
     const handleSubmit = (e) => {
       let newMovie = {
+        id:movieList.length+1,
         name,
         date,
         rating,

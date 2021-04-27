@@ -1,27 +1,23 @@
 import React,{useState} from 'react'
-import {Data} from './Component/Data'
-import SearchMovie from './Component/SearchMovie'
-import AddMovie from './Component/AddMovie'
-import MovieList from './Component/MovieList'
-import Description from './Component/Description'
+import {Data} from './Data'
+import SearchMovie from './SearchMovie'
+import AddMovie from './AddMovie'
+import MovieList from './MovieList'
 
-import './App.css';
+import '../App.css'
 import { BrowserRouter as Router ,Route} from 'react-router-dom'
-import AppRouter from './Router'
 
-function App({movieList,addNewMovie}) {
-  // const [movieList, setMovieList] = useState(Data);
+function Home() {
+  const [movieList, setMovieList] = useState(Data);
   const [SearchByName, setSearchByName] = useState('');
   const [SearchByRate, setSearchByRate] = useState(1);
 
-  // const addNewMovie = (e, newMovie) => {
-  //   e.preventDefault();
-  //   setMovieList([...movieList, newMovie]);
-  // };
-  
+  const addNewMovie = (e, newMovie) => {
+    e.preventDefault();
+    setMovieList([...movieList, newMovie]);
+  };
 
   return (
-    
 
     <div className="App">
       <SearchMovie
@@ -35,10 +31,10 @@ function App({movieList,addNewMovie}) {
         SearchByRate={SearchByRate}
       />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <AddMovie addNewMovie={addNewMovie} movieList={movieList} />
+        <AddMovie addNewMovie={addNewMovie} />
       </div>
     </div>
   );
 }
 
-export default App;
+export default Home;

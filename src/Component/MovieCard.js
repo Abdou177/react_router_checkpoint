@@ -1,9 +1,11 @@
 import React from 'react'
 import Rate from './Rate'
 import './Card.css'
+import {Link} from 'react-router-dom';
+
 
 const MovieCard = ({
-  movie: { name, date, rating, image, type, description },
+  movie: { name, date, rating, image, type, description, id },
 }) => {
   return (
     <div className="card">
@@ -24,7 +26,7 @@ const MovieCard = ({
         </div>
         <div className="card_right__review">
           <p>{description}</p>
-          <a href="https://www.imdb.com/?ref_=nv_home">Read More</a>
+          <Link to={`/description/${id}`}>Read More</Link>
         </div>
         <div className="card_right__button">
           <a href="https://www.imdb.com/?ref_=nv_home">WATCH TRAILER</a>

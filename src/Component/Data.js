@@ -1,7 +1,7 @@
 
 export const Data = [
     {
-      id: Math.random(),
+      id: 1,
     image:'https://i.pinimg.com/originals/4d/ea/be/4deabeb03554cacdba17995886789005.jpg',
     rating: 4,
     name: "Devil's Mile",
@@ -12,7 +12,7 @@ export const Data = [
   
     },
     {
-        id: Math.random(),
+        id:2,
         image:
           'https://static.cinemagia.ro/img/db/movie/00/69/88/once-upon-a-time-in-the-west-549264l.jpg',
         rating: 5,
@@ -23,7 +23,7 @@ export const Data = [
           'A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.',
       },
       {
-        id: Math.random(),
+        id: 3,
         image:
           'https://i.pinimg.com/564x/37/bd/f8/37bdf8f405a30977959e112d6f48aec0.jpg',
         rating: 4,
